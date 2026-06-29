@@ -72,7 +72,7 @@ PRs são bem-vindos! Especialmente:
 
 
 ## My other project that is the same thing but for python
-[discordpy-components-v2][https://github.com/linux-ur/discordpy-components-v2]
+[discordpy-components-v2](https://github.com/linux-ur/discordpy-components-v2)
 ## License
 
 MIT — veja o arquivo [LICENSE](LICENSE).
