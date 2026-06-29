@@ -1,66 +1,78 @@
-discord-net-components-v2
+**Boss, aqui está um README.md bem polido, profissional e completo pro seu repo.** 
 
+Copie e cole direto no `README.md` (branch `cdn` ou main, como preferir). Eu deixei ele mais atrativo, com badges, seções claras, instalação passo a passo e tom mais direto.
 
-A Claude Skill that teaches Claude (in Claude.ai, Claude Code, or via the API) everything it needs to write and debug Discord bot UIs using Discord.Net's Message Components V2 (ComponentBuilderV2) in C#.
+```markdown
+# discord-net-components-v2
 
+**Uma Skill para Claude (e outros LLMs) que ensina tudo sobre Discord.Net Message Components V2 (ComponentBuilderV2) em C#.**
 
-Built from:
+Transforme seu bot Discord em uma interface moderna e rica com Containers, Sections, Text Displays, Media Galleries, Separators e mais — tudo com o poder do Discord Components V2.
 
+![GitHub stars](https://img.shields.io/github/stars/linux-ur/discord-net-components-v2?style=social)
+![License](https://img.shields.io/github/license/linux-ur/discord-net-components-v2)
+![Discord.Net](https://img.shields.io/badge/Discord.Net-3.20+-blue)
 
-Discord.Net's official Components V2 guides — Intro, Advanced, Interaction
-Discord's own Component Reference
-Discord.Net's v3.18 breaking changes notes
+## O que é isso?
 
+Esta skill foi construída a partir da documentação oficial do **Discord.Net** (guides de Components V2) + referência da API do Discord. Ela dá ao Claude (Claude.ai, Claude Code ou via API) todo o conhecimento necessário para:
 
-What's inside
+- Gerar UIs complexas com Components V2
+- Escrever código fluente com `ComponentBuilderV2`
+- Lidar com interações (botões, selects, modals, etc.)
+- Evitar os erros comuns da migração V1 → V2
 
+## Estrutura do projeto
 
+```
 discord-net-components-v2/
-├── SKILL.md                       — entry point: mental model, nesting cheat sheet, quick start
+├── SKILL.md                          ← Ponto de entrada (mental model, cheat sheet de nesting, quick start)
 └── references/
-    ├── component-types.md         — full field-by-field spec for every component type
-    ├── builder-guide.md           — ComponentBuilderV2 fluent API + a complete worked example
-    ├── interactions.md            — catching clicks/selects/modals, FindComponentById, UpdateAsync
-    └── troubleshooting.md         — the ComponentsV2 flag, v3.18 breaking changes, common errors
+    ├── component-types.md            ← Especificação completa de cada tipo de componente
+    ├── builder-guide.md              ← API fluente + exemplo completo
+    ├── interactions.md               ← Como capturar interações, FindComponentById, UpdateAsync
+    └── troubleshooting.md            ← Flag ComponentsV2, breaking changes v3.18, erros comuns
+```
 
+`SKILL.md` é curta e direta — carrega tudo que o LLM precisa pra tomar decisões rápidas. Os arquivos de referência são carregados sob demanda pra detalhes exaustivos.
 
+## Instalação
 
-SKILL.md is intentionally short — it carries the decision-making info you need on every task (what nests in what, the builder pattern, the quick-start snippet). The references/ files are loaded on demand for exhaustive detail, full code samples, and error-message lookups.
+### Claude.ai / Apps
+1. Baixe o repositório como ZIP
+2. Vá em **Settings → Capabilities → Skills**
+3. Faça upload do ZIP da pasta `discord-net-components-v2`
 
-
-Installing this skill
-
-
-Claude.ai / Claude apps: zip the discord-net-components-v2/ folder (or download the release .skill file, if you've packaged one) and upload it under Settings → Capabilities → Skills.
-
-
-Claude Code: drop the folder into your skills directory, e.g.:
-
-
+### Claude Code
+```bash
 cp -r discord-net-components-v2 ~/.claude/skills/
+```
 
+### API / Outros LLMs
+Inclua o conteúdo da skill na configuração de tools/skills conforme a documentação do seu agente.
 
+Depois de instalada, é só falar com o Claude sobre **Discord.Net Components V2** que ele vai usar automaticamente.
 
-API: include the skill's contents as part of your tool/skill configuration per the Agent Skills docs.
+## Uso rápido
 
+Basta mencionar algo como:
+- "Cria um painel com container, section e botões usando Components V2"
+- "Como faço um modal com text input e checkbox no Discord.Net?"
+- "Corrige esse código de ComponentBuilderV2"
 
-Once installed, just talk to Claude about Discord.Net Components V2 — buttons, action rows, containers, sections, modals, the ComponentsV2 flag, etc. — and it will consult this skill automatically.
+## Escopo e Observações
 
+- Baseado na versão **3.20.1** do Discord.Net
+- Alguns componentes novos da API (Label, File Upload, etc.) estão documentados como "suporte na library ainda não confirmado"
+- Se algo divergir do seu pacote instalado, confie no IntelliSense e abra um PR
 
-Scope & accuracy notes
+## Contributing
 
+PRs são bem-vindos! Especialmente:
+- Confirmação dos métodos fluentes (`WithSection`, `WithContainer`, etc.)
+- Suporte a novos componentes assim que o Discord.Net implementar
+- Mais exemplos reais
 
-This skill targets the Discord.Net guide snapshot at version 3.20.1 (the version referenced in the source docs at the time this skill was written). Discord.Net evolves quickly — if you hit a mismatch (a method that doesn't exist, a new fluent helper that does), trust your installed package's IntelliSense/source over this skill, and consider opening a PR here.
-Discord's API reference also documents newer modal-only component types (Label, File Upload, Radio Group, Checkbox Group, Checkbox — types 18, 19, 21–23) that were not yet present in Discord.Net's own documented component table as of this writing. They're noted in references/component-types.md as "API-level, library support unconfirmed."
+## License
 
-
-Contributing
-
-
-PRs welcome — especially to confirm/correct the "inferred" fluent builder methods (WithSection, WithThumbnail, WithFile, WithSeparator, WithContainer) once you've checked them against a live Discord.Net install, or to add coverage for the newer modal component types once Discord.Net ships them.
-
-
-License
-
-
-MIT — see LICENSE.
+MIT — veja o arquivo [LICENSE](LICENSE).
