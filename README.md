@@ -1,8 +1,3 @@
-**Boss, aqui está um README.md bem polido, profissional e completo pro seu repo.** 
-
-Copie e cole direto no `README.md` (branch `cdn` ou main, como preferir). Eu deixei ele mais atrativo, com badges, seções claras, instalação passo a passo e tom mais direto.
-
-```markdown
 # discord-net-components-v2
 
 **Uma Skill para Claude (e outros LLMs) que ensina tudo sobre Discord.Net Message Components V2 (ComponentBuilderV2) em C#.**
