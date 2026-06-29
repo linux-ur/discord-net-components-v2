@@ -68,6 +68,11 @@ PRs são bem-vindos! Especialmente:
 - Suporte a novos componentes assim que o Discord.Net implementar
 - Mais exemplos reais
 
+
+
+
+## My other project that is the same thing but for python
+[discordpy-components-v2][https://github.com/linux-ur/discordpy-components-v2]
 ## License
 
 MIT — veja o arquivo [LICENSE](LICENSE).
